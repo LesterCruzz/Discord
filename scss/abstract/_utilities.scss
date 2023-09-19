@@ -50,6 +50,10 @@ $positions: absolute, relative, sticky, fixed;
 }
 
 @for $i from 0 through 100 {
+  // gap
+  .g--#{$i} {
+    gap: $i + rem;
+  }
   // width
   .w--#{$i} {
     width: $i + rem;
