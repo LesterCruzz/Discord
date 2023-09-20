@@ -2,7 +2,7 @@
 
 .btn {
   background-color: transparent;
-  padding: 1.2rem 2.3rem;
+  padding: .8rem 2.3rem;
   border-radius: 6rem;
   display: inline-block;
   border: 1px solid transparent;
@@ -14,5 +14,29 @@
   &.bg--white {
     background-color: $clr--light;
     color: $clr--dark;
+  }
+  &.bg--black {
+    background-color: $clr--dark;
+    color: $clr--light;
+  }
+}
+
+.btn--s {
+  background-color: transparent;
+  padding: .4rem 1rem;
+  border-radius: 6rem;
+  display: inline-block;
+  border: 1px solid transparent;
+  &.bg--purple {
+    background-color: $clr--primary;
+    color: $clr--light;
+  }
+  &.bg--white {
+    background-color: $clr--light;
+    color: $clr--dark;
+  }
+  &.bg--black {
+    background-color: $clr--dark;
+    color: $clr--light;
   }
 }

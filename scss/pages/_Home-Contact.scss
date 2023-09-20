@@ -1,1 +1,99 @@
 @use "../abstract/" as *;
+
+// banner
+
+.banner {
+  .container {
+    padding: 2rem;
+  }
+  h1 {
+    font-weight: bolder;
+  }
+  p {
+    display: flex;
+    text-align: justify;
+  }
+  img {
+    position: relative;
+    right: 5rem;
+    top: 2.7rem;
+  }
+
+  @include mediaQuery(1024px) {
+    background-image: url("../../img/Home\ Banner.png");
+    background-size: 100% 100%;
+    padding: 3rem;
+    img {
+      display: none;
+    }
+    &__wrapper {
+      @include centerAll;
+    }
+    &__text {
+      text-align: center;
+      max-width: 60rem;
+      li:first-child a:hover {
+        color: $clr--primary;
+      }
+      li:first-child a:hover {
+        color: $clr--primary;
+      }
+      li:last-child a:hover {
+        background-color: $clr--dark--gray;
+      }
+      ul {
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+        a:hover {
+          box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+          transition: 0.3s ease;
+        }
+      }
+    }
+  }
+}
+
+// Services
+
+.services {
+  .container {
+    padding: 2rem;
+  }
+  &__card {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 4rem 0;
+    h4 {
+      text-align: start;
+    }
+    p {
+      font-size: 1.3rem;
+      text-align: justify;
+    }
+  }
+  @include mediaQuery(1024px) {
+    &__card {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-around;
+      img {
+        width: 50rem;
+      }
+      .services__text {
+        max-width: 30rem;
+        h4 {
+          font-size: 3rem;
+        }
+      }
+    }
+    &:nth-child(even) .services__card {
+      flex-direction: row-reverse;
+    }
+  }
+}
+.services:nth-child(even) {
+  background-color: $clr--light--gray;
+}
