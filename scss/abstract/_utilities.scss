@@ -6,6 +6,7 @@ $colors: (
   "light": $clr--light,
   "light--gray": $clr--light--gray,
   "primary": $clr--primary,
+  "light--primary": $clr--light--primary,
 );
 
 @each $key, $val in $colors {
@@ -52,6 +53,10 @@ $positions: absolute, relative, sticky, fixed;
 }
 
 @for $i from 0 through 100 {
+  // font size
+  .f--#{$i} {
+    font-size: $i + rem;
+  }
   // gap
   .g--#{$i} {
     gap: $i + rem;

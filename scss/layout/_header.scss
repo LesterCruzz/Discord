@@ -9,6 +9,7 @@
     padding: 0 2rem;
   }
   &__nav {
+    
     display: flex;
     align-items: center;
     gap: 2rem;
@@ -23,9 +24,43 @@
       text-align: center;
       transition: 0.5s ease;
       border-top-left-radius: 1rem;
+      
+      
+      li {
+        display: flex;
+        margin-left: 4rem;
+        a {
+          margin-bottom: 1.7rem;
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+      .btn:hover {
+        background-color: $clr--light--primary;
+        box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+        transition: .3s ease;
+      }
+      div {
+        display: flex;
+        justify-content: space-between;
+        padding: 2rem;
+        a{
+          font-size: 2rem;
+        }
+      }
+      span {
+        height: .2rem;
+        width: 25rem;
+        background-color: $clr--light--gray;
+        display: block;
+      }
       &.open {
         right: 0rem;
         transition: 0.5s ease;
+      }
+      a {
+        color: $clr--dark;
       }
     }
   }
@@ -74,7 +109,7 @@
     display: block;
     transition: 0.5s ease;
   }
-}
+
 
 @include mediaQuery(1024px) {
   .header {
@@ -127,4 +162,5 @@
       }
     }
   }
+}
 }
