@@ -20,6 +20,7 @@
   }
 
   @include mediaQuery(1024px) {
+    // background-color: $clr--primary;
     background-image: url("../../img/Home\ Banner.png");
     background-size: 100% 100%;
     padding: 3rem;

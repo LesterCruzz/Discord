@@ -51,24 +51,48 @@
   text-align: start;
 }
 
+.align--start {
+  align-items: start;
+}
+
 .t--align--end {
   text-align: end;
+}
+
+.align--end {
+  align-items: end;
 }
 
 .t--align--center {
   text-align: center;
 }
 
+.align--center {
+  align-items: center;
+}
+
 .t--align--justify {
   text-align: justify;
+}
+
+.align--justify {
+  align-items: justify;
 }
 
 .t--align--left {
   text-align: left;
 }
 
+.align--left {
+  align-items: left;
+}
+
 .t--align--right {
   text-align: right;
+}
+
+.align--right {
+  align-items: right;
 }
 
 .d--flex {
@@ -5952,20 +5976,32 @@ img {
   top: 0;
   width: 65%;
   height: 100vh;
-  flex-direction: column;
   text-align: center;
   transition: 0.5s ease;
   border-top-left-radius: 1rem;
+  border-bottom-left-radius: 1rem;
 }
 .header__nav ul li {
   display: flex;
-  margin-left: 4rem;
+  margin-left: 1rem;
+  width: 70%;
+  padding-left: 1rem;
+  padding-top: 1rem;
+}
+.header__nav ul li:hover {
+  background-color: #f6f6f6;
 }
 .header__nav ul li a {
-  margin-bottom: 1.7rem;
+  margin-bottom: 1rem;
+  font-size: 1rem;
 }
 .header__nav ul li a:hover {
   text-decoration: underline;
+}
+.header__nav ul .btn {
+  position: relative;
+  bottom: -18rem;
+  font-size: 1rem;
 }
 .header__nav ul .btn:hover {
   background-color: #5f6ae6;
@@ -6029,6 +6065,9 @@ img {
     align-items: center;
     justify-content: space-around;
   }
+  .header .header__wrapper .d--flex .toggle__menu {
+    display: none;
+  }
   .header .header a {
     display: flex;
     align-items: center;
@@ -6041,18 +6080,37 @@ img {
   }
   .header .header__nav ul {
     gap: 4rem;
+    background: transparent;
+    position: unset;
+    height: -moz-fit-content;
+    height: fit-content;
+    display: flex;
+    gap: 0;
+  }
+  .header .header__nav ul li {
+    margin-left: 0;
+  }
+  .header .header__nav ul li a {
+    margin: 0 2rem;
   }
   .header .header__nav ul a {
     display: block;
     font-size: 1.8rem;
     font-weight: bold;
     color: #fff;
+    font-size: 1.2rem;
+  }
+  .header .header__nav ul .header__home {
+    display: none;
+  }
+  .header .header__nav ul div {
+    display: none;
+  }
+  .header .header__nav ul .btn {
+    display: none;
   }
   .header .header__nav a:hover {
     text-decoration: underline;
-  }
-  .header .header__nav .toggle__menu {
-    display: none;
   }
   .header .header ul {
     display: flex;

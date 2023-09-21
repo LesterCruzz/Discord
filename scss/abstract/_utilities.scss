@@ -30,6 +30,11 @@ $alignments: start, end, center, justify, left, right;
       text-align: $alignment;
     }
   }
+  .align {
+    &--#{$alignment} {
+      align-items: $alignment;
+    }
+  }
 }
 
 $displays: flex, block, inline-block, grid, none;
