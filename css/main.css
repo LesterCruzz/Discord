@@ -6029,6 +6029,21 @@ img {
 .header__nav ul a {
   color: #23272a;
 }
+.header__nav .bler {
+  width: 35%;
+  height: 100vh;
+  display: block;
+  background-color: rgba(0, 0, 0, 0.2);
+  top: 0;
+  position: absolute;
+  left: 0;
+  z-index: 999;
+  opacity: 0;
+}
+.header__nav .bler.open {
+  opacity: 1;
+  transition: 5s ease;
+}
 .header__wrapper {
   display: flex;
   justify-content: space-between;
